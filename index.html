@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hostel Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p id="userEmail" style="text-align:right; margin:10px;"></p>
+<button onclick="logoutUser()" style="float:right; margin:10px;">Logout</button>
+
+    <div class="container">
+        <h1 class="main-heading">Hostel Lost & Found</h1>
+
+        <p class="subtitle">
+            A simple digital platform to report and recover lost items in hostels
+        </p>
+
+        <!-- CARD CONTAINER -->
+        <div class="card-container">
+            <!-- Lost Item collection -->
+            
+            <div class="card lost">
+                <img src="lost form.png" class="card-image" alt="Lost Item">
+                <h2>View Lost Items</h2>
+                <p>
+                    See all items reported as lost.You may find your item here.
+                </p>
+                <a href="lost-list.html">
+                    <button>View Lost Items</button>
+                </a>
+            </div>
+
+            <!-- Lost Item Card -->
+            <div class="card lost">
+                <img src="lost view.png" class="card-image" alt="Lost Item">
+                <h2>Report Lost Item</h2>
+                <p>
+                    Lost something in the hostel? Report it here so others can help you find it.
+                </p>
+                <a href="lost.html">
+                    <button>Report Lost Item</button>
+                </a>
+            </div>
+            <!-- Found Item collection -->
+            <div class="card found">
+                <img src="found view.png" class="card-image" alt="Found Item">
+                <h2>View Found Items</h2>
+                <p>
+                    Browse items that have already been found.You might find your lost item here.
+                </p>
+                <a href="found-list.html">
+                    <button>View Found Items</button>
+                </a>
+            </div>
+
+            <!-- Found Item Card -->
+            <div class="card found">
+                <img src="found form.png" class="card-image" alt="Found Item">
+                <h2>Report Found Item</h2>
+                <p>
+                    Found an item? Help return it to the rightful owner by reporting it here.
+                </p>
+                <a href="found.html">
+                    <button>Report Found Item</button>
+                </a>
+            </div>
+
+        </div>
+        <!-- END CARD CONTAINER -->
+    </div>
+
+    <script type="module" src="auth.js"></script>
+
+<script type="module">
+  import { auth } from "./firebase.js";
+  import { onAuthStateChanged } 
+  from "https://www.gstatic.com/firebasejs/12.8.0/firebase-auth.js";
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      // Not logged in → redirect
+      window.location.href = "login.html";
+    } else {
+      // Logged in → show email
+      document.getElementById("userEmail").innerText =
+        "Logged in as: " + user.email;
+    }
+  });
+</script>
+</body>
+</html>

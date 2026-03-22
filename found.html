@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Found Item</title>
+    <link rel="stylesheet" href="found.css">
+</head>
+
+<body>
+    <div class="container found-page">
+
+        <h1 class="main-heading">Find something!</h1>
+
+        <p class="subtitle">
+            Help return the item by sharing the details below.
+        </p>
+
+        <!-- 🔑 ONLY id ADDED -->
+        <form class="found-form" id="foundForm">
+
+            <div class="form-grid">
+
+                <label>
+                    Item Name
+                    <input type="text" id="itemName" placeholder="e.g. ID Card, Keys" required>
+                </label>
+
+                <label>
+                    Item Category
+                    <select id="category" required>
+                        <option value="">Select category</option>
+                        <option>ID Card</option>
+                        <option>Keys</option>
+                        <option>Electronics</option>
+                        <option>Books</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+
+                <label>
+                    Your name
+                    <input type="text" id="name" placeholder="Your name" required>
+                </label>
+
+                <label>
+                    Location of Found
+                    <input type="text" id="location" placeholder="e.g. Mess, Room 203, Library">
+                </label>
+
+                <label>
+                    Date of Found
+                    <input type="date" id="dateFound">
+                </label>
+
+                <label>
+                    Approximate Time
+                    <input type="time" id="timeFound">
+                </label>
+
+                <label class="full-width">
+                    Description
+                    <textarea id="description" rows="4"
+                        placeholder="Describe the item, color, location, etc."></textarea>
+                </label>
+
+                <label class="full-width">
+                    Upload Item Image (optional)
+                    <input type="file" id="image" accept="image/*">
+                </label>
+
+                <!-- 🔑 CONTACT ADDED (LOGIC NEEDS IT) -->
+                <label class="full-width">
+                    Contact Info
+                    <input type="text" id="contact" placeholder="Phone No" required>
+                </label>
+
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Found Item
+            </button>
+
+        </form>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+    </div>
+
+
+    <script type="module" src="js-found.js"></script>
+
+</body>
+</html>

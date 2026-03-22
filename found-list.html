@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Found Items</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="found-list.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="page-header">
+      <h1 class="main-heading">Found Repository</h1>
+      <p class="subtitle">
+        Here are all Found item reports arranged from latest to oldest.
+      </p>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+
+      <!-- LEFT FILTER SIDEBAR -->
+  <aside class="filters">
+    <h3>Filters</h3>
+
+    <label>
+      Category
+      <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="ID Card">ID Card</option>
+      <option value="Keys">Keys</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Books">Books</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label>
+      Status
+      <select id="statusFilter">
+      <option value="all">All</option>
+      <option value="pending">Pending</option>
+      <option value="completed">Completed</option>
+      </select>
+    </label>
+
+    <label for="dateFilter">Found Date</label>
+    <input type="date" id="dateFilter">
+
+    <button id="btn">Apply filters</button>
+    <button id="resetBtn">Reset filters</button>
+
+
+  </aside>
+
+      
+      <div id="foundItemsContainer"></div>
+
+      <a href="index.html" class="back-link">
+        ← Back to Home
+      </a>
+    </main>
+
+  </div>
+
+  <script src="firebase.js" type="module"></script>
+<script src="found-list.js" type="module"></script>
+
+</body>
+
+</html>

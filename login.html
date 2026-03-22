@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="login-container">
+
+  <div class="login-box">
+
+    <h1 class="app-title">Hostel Lost & Found</h1>
+    <p class="tagline">Find it. Return it. Help others.</p>
+
+    <div class="login-card">
+      <h2>Login</h2>
+
+      <input type="email" id="email" placeholder="Enter email">
+      <input type="password" id="password" placeholder="Enter password">
+
+      <button onclick="login()">Login</button>
+
+      <p>Don't have an account?</p>
+      <button onclick="register()" class="register-btn">Register</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="auth.js"></script>
+
+<script>
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  window.loginUser(email, password);
+}
+
+function register() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  window.registerUser(email, password);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lost Items</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lost-list.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="page-header">
+      <h1 class="main-heading">Lost Repository</h1>
+      <p class="subtitle">
+        Here are all lost item reports arranged from latest to oldest.
+      </p>
+    </header>
+
+    <main class="page-content">
+
+      <aside class="filters">
+        <h3>Filters</h3>
+
+        <label>
+          Category
+          <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="ID Card">ID Card</option>
+            <option value="Keys">Keys</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Books">Books</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label>
+          Status
+          <select id="statusFilter">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </label>
+
+        <label for="dateFilter">Lost Date</label>
+        <input type="date" id="dateFilter">
+
+        <button id="btn">Apply filters</button>
+        <button id="resetBtn">Reset filters</button>
+      </aside>
+
+      <div id="lostItemsContainer"></div>
+
+      <a href="index.html" class="back-link">
+        ← Back to Home
+      </a>
+    </main>
+  </div>
+
+  <script src="firebase.js" type="module"></script>
+  <script src="lost-list.js" type="module"></script>
+
+</body>
+</html>

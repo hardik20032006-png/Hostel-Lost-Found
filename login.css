@@ -1,0 +1,110 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* BACKGROUND */
+.login-container {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;   /* IMPORTANT */
+    justify-content: center;  /* vertical center */
+    align-items: center;      /* horizontal center */
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* WRAPPER */
+.login-box {
+text-align: center;
+margin-top: -40px;
+align-items: center;
+}
+
+/* TITLE */
+.app-title {
+color: white;
+font-size: 42px;
+font-weight: bold;
+letter-spacing: 1px;
+margin-bottom: 8px;
+}
+
+/* TAGLINE */
+.tagline {
+color: rgba(255,255,255,0.85);
+font-size: 16px;
+margin-bottom: 30px;
+}
+
+/* CARD */
+.login-card {
+background: white;
+padding: 30px;
+border-radius: 16px;
+width: 320px;
+text-align: center;
+border: 2px solid black;
+box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* INPUTS */
+.login-card input {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 8px;
+outline: none;
+transition: 0.3s;
+}
+
+/* INPUT FOCUS */
+.login-card input:focus {
+border-color: #667eea;
+box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* BUTTONS */
+.login-card button {
+width: 100%;
+padding: 12px;
+margin-top: 12px;
+border: none;
+border-radius: 8px;
+background: linear-gradient(135deg, #667eea, #764ba2);
+color: white;
+font-weight: bold;
+letter-spacing: 0.5px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.login-card button:hover {
+transform: scale(1.04);
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+background: linear-gradient(135deg, #48bb78, #38a169);
+}
+
+/* REGISTER HOVER */
+.register-btn:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 20px rgba(72,187,120,0.4);
+}
+
+/* TEXT */
+.login-card p {
+margin-top: 10px;
+font-size: 14px;
+color: #444;
+}
